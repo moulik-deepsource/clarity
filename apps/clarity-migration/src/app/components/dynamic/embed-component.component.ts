@@ -4,7 +4,7 @@ import { DynamicRender } from './dynamic-render.service';
 
 @Component({
   selector: 'embed-component',
-  template: ` <ng-template dynamicHostDirective></ng-template> `,
+  template: `<div class="embed-component"><ng-template dynamicHostDirective></ng-template></div>`,
 })
 export class EmbedComponent {
   @Input('src') src: string;

@@ -5,9 +5,11 @@ import { Component, Input } from '@angular/core';
   template: `
     <ng-content></ng-content>
     <div *ngIf="component">
+      <h6>Demo</h6>
       <embed-component [src]="component"></embed-component>
     </div>
     <div *ngIf="code">
+      <h6>Code</h6>
       <clr-tabs>
         <clr-tab *ngFor="let file of files">
           <button clrTabLink>{{ getFile(file) }}</button>

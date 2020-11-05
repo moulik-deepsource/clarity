@@ -4,6 +4,7 @@ import * as Prism from 'prismjs';
 
 import 'prismjs/components/prism-typescript';
 import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-json';
 
 const MAP_TYPE_HIGHLIGHT = {
   ts: 'typescript',
@@ -23,7 +24,7 @@ export class SourceCodeComponent {
 
   ngOnInit() {
     if (this.content) {
-      this.formattedContent = this.render(this.content);
+      this.formattedContent = this.render(this.content, this.language);
     }
 
     if (this.src) {
@@ -34,7 +35,7 @@ export class SourceCodeComponent {
   }
 
   private render(content, lang?: string) {
-    return Prism.highlight(content, Prism.languages[lang || 'html']);
+    return Prism.highlight(content.trim(), Prism.languages[lang || 'html']);
   }
 
   private getExtension(string) {
