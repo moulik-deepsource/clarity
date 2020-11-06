@@ -6,10 +6,14 @@
 <p>There is <b>eslint plugin</b> that could help with the adoption of Core Buttons</p>
 <sourcecode [content]="eslintSetup" language="json"></sourcecode>
 
-<example-wrapper [code]="angularExamples" component="4.0.0/buttons/buttons.ng.ts">
-  <h4>Angular example</h4>
-</example-wrapper>
+<h3>Examples</h3>
 
-<example-wrapper [code]="coreExamples" component="4.0.0/buttons/buttons.core.ts">
-  <h4>Core example</h4>
-</example-wrapper>
+<div class="space-bottom" *ngFor="let example of code">
+  <example-wrapper *ngIf="example.ng" [code]="example.ng.files" [component]="example.ng.component">
+    <h4 *ngIf="example.ng.title">{{ example.ng.title }}</h4>
+  </example-wrapper>
+
+  <example-wrapper *ngIf="example.core" [code]="example.core.files" [component]="example.core.component">
+    <h4 *ngIf="example.core.title">{{ example.core.title }}</h4>
+  </example-wrapper>
+</div>

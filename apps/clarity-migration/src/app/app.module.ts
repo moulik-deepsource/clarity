@@ -18,6 +18,8 @@ import { DynamicHostDirective } from './components/dynamic/dynamic-host-directiv
 import { EmbedComponent } from './components/dynamic/embed-component.component';
 import { ExampleWrapper } from './components/example-wrapper';
 
+import '@clr/icons/shapes/all-shapes';
+
 @NgModule({
   declarations: [
     AppComponent,
