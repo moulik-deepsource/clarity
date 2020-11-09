@@ -7,16 +7,6 @@
   row-gap: var(--cds-token-layout-space-xxl);
 }
 
-.hero-image {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.hero-container {
-  position: relative;
-  height: 550px;
-}
-
 .whats-new {
   background-color: #dbe9f0;
   width: 500%;
@@ -69,27 +59,29 @@
 <template>
   <main cds-layout="vertical align:horizontal-stretch">
     <!-- hero -->
-    <section cds-layout="p-l:md p-l@sm:xl p-r:md p-r@sm:xl p-y:lg p-y@sm:xxl" class="hero">
-      <div cds-layout="grid align:fill" class="home-section hero-container">
-        <h1 class="hero-header" cds-layout="col:12" cds-text="display">Enterprise-Ready Consumer-Simple</h1>
-        <p class="hero-text" cds-layout="col:12 col@md:6 m-t:xl" cds-text="section expanded">
-          Clarity is a scalable, customizable, open source design system bolstered by the people that build with it, the
-          people we build it for, and the community that makes us who we are.
-        </p>
-        <div cds-layout="col:12 m-t:lg">
-          <cds-button>
-            <router-link to="/get-started">
-              Get started using Clarity
-            </router-link>
-          </cds-button>
+    <section cds-layout="p-l:md p-l@sm:xl p-r:md p-r@sm:xl p-y:lg p-y@sm:xxl">
+      <div cds-layout="vertical" class="">
+        <h1 cds-text="display">Enterprise-Ready Consumer-Simple</h1>
+        <div cds-layout="grid cols:12 cols@sm:6 m-t:xl">
+          <p cds-text="section expanded">
+            Clarity is a scalable, customizable, open source design system bolstered by the people that build with it,
+            the people we build it for, and the community that makes us who we are.
+          </p>
         </div>
-        <div class="image-wrapper">
-          <img
-            class="hero-image"
-            src="/images/home/img_hero.svg"
-            alt="placeholder image"
-            cds-layout="col:12 col@sm:9 col@sm:end-13 fill"
-          />
+        <router-link to="/get-started" cds-layout="m-t:lg">
+          <cds-button>
+            Get Started using Clarity
+          </cds-button>
+        </router-link>
+        <div cds-layout="grid">
+          <div cds-layout="col@sm:start-4 col@sm:end-12">
+            <img
+              style="max-width: 720px;"
+              cds-layout="fill"
+              src="/images/home/img_hero.svg"
+              alt="A man riding a singled wheeled skateboard surrounded by Clarity components and tools."
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -109,14 +101,14 @@
     <section cds-layout="p-l:md p-l@sm:xl p-r:md p-r@sm:none p-t:lg p-t@sm:xxl">
       <div class="home-section section-column-wrapper" cds-layout="grid cols@sm:12 cols@md:6 align:vertical-center">
         <div cds-layout="vertical align:vertical-center">
-          <div aria-hidden="true" class="accent-wrapper" cds-layout="grid gap:md">
+          <div aria-hidden="true" class="accent-wrapper" cds-layout="grid gap:md m-t:md m-t@sm:none">
             <div class="orange-accent" cds-layout="col:3"></div>
           </div>
           <h1 class="accented" cds-text="subsection uppercase expanded" cds-layout="m-t:lg">
             Clarity is all about people, like designers
           </h1>
           <h2 cds-text="heading" cds-layout="m-t:lg">Design with confidence</h2>
-          <p cds-text="subsection expanded" cds-layout="m-t:xl">
+          <p cds-text="section expanded" cds-layout="m-t:xl">
             Our toolkit is Figma. Every component, pattern, and guideline we ship is rooted in real customer
             interactions. As a result, you can rely on Clarity for 30+ components and over 200 icons so you can focus on
             product-specific user problems.
@@ -128,7 +120,7 @@
             >Browse our Figma libraries</router-link
           >
         </div>
-        <div cds-layout="vertical ">
+        <div cds-layout="vertical m-t:md">
           <img src="/images/home/img_design_w_confidence.svg" alt="placeholder image" cds-layout="fill" />
         </div>
       </div>
@@ -147,7 +139,7 @@
             Clarity is all about people, like developers
           </h1>
           <h2 cds-text="heading" cds-layout="m-t:lg">Build framework agnostic</h2>
-          <p cds-text="subsection expanded" cds-layout="m-t:xl">
+          <p cds-text="section expanded" cds-layout="m-t:xl">
             The first folx that built Clarity from scratch were a scrappy team of developers, designers, and content
             creators. Clarity has continued to grow on that strong start by supporting the big three: Angular, React and
             Vue. Our latest web components provide support for them all. Clarity provides code examples and detailed API
@@ -177,7 +169,7 @@
             Clarity is all about people, like all of our users
           </h1>
           <h2 cds-text="heading" cds-layout="m-t:lg">Backed by performant components</h2>
-          <p cds-text="subsection expanded" cds-layout="m-t:xl">
+          <p cds-text="section expanded" cds-layout="m-t:xl">
             When Clarity customers speak, we listen. One of our most requested components, datagrid, can support more
             than a dozen features and handle thousands of data entries. Let us build performant components so you can
             focus on building applications.
@@ -200,7 +192,7 @@
           alt="placeholder image"
           cds-layout="col:start-2 col:10 fill m-t:xl"
         />
-        <p cds-text="subsection expanded" cds-layout="m-t:xl">
+        <p cds-text="section expanded" cds-layout="m-t:xl">
           We’ve integrated accessibility into the design and development of the Clarity assets. Accessibility is a
           priority, and we work closely with a dedicated accessibility team following the WCAG 2.1 AA guidelines. Use
           Clarity to leverage all the built-in accessibility features and follow our accessibility guidelines to make
@@ -221,49 +213,51 @@
     <section cds-layout="p-l:md p-l@sm:xl p-r:md p-r@sm:none p-y:lg p-y@sm:xxl" class="tinted action-light">
       <div cds-layout="grid cols:12" class="home-section">
         <h1 cds-text="subsection uppercase expanded" cds-layout="m-t:lg">Together, we are the Clarity community</h1>
-        <h2 cds-text="heading" cds-layout="m-t:md">Join us and we can build better products together</h2>
-        <p cds-text="subsection expanded" cds-layout="m-t:lg">
+        <h2 cds-text="heading" cds-layout="m-t:lg">Join us and we can build better products together</h2>
+        <p cds-text="section expanded" cds-layout="m-t:xl">
           Great design systems have a great community behind it. We open sourced Clarity early in our journey because we
           believe in the importance of community. It is foundational to our story. We are open about our roadmap and
           priorities. We are proud of what we have running under the hood. Check out our Github and take a look at our
           priority list, our code, our documentation, and join our community.
         </p>
-        <cds-button cds-layout="m-t:lg" action="outline">
-          <router-link to="/get-started">
+        <router-link to="/get-started">
+          <cds-button cds-layout="m-t:lg" action="outline">
             Join the community
-          </router-link>
-        </cds-button>
+          </cds-button>
+        </router-link>
         <img src="/images/home/img_join_us.svg" alt="placeholder image" cds-layout="col:start-2 col:10 fill m-t:xl" />
-        <div cds-text="center" cds-layout="horizontal gap:lg align:fill col:start-2 col:10 m-t:xl">
+        <div cds-layout="horizontal gap:xl gap@sm:lg align:horizontal-center wrap@sm:none col:start-2 col:10 m-t:xl">
           <div>
-            <h3 cds-text="display" class="docs-red">2M+</h3>
-            <p cds-text="body expanded" cds-layout="m-t:lg">downloads since the beginning of Clarity</p>
+            <h3 cds-text="display center" class="docs-red">2M+</h3>
+            <p cds-text="body expanded center" cds-layout="m-t:lg">downloads since the beginning of Clarity</p>
           </div>
           <div>
-            <h3 cds-text="display" class="docs-red">2700+</h3>
-            <p cds-text="body expanded" cds-layout="m-t:lg">Github repositories depending on Clarity</p>
+            <h3 cds-text="display center" class="docs-red">2700+</h3>
+            <p cds-text="body expanded center" cds-layout="m-t:lg">Github repositories depending on Clarity</p>
           </div>
           <div>
-            <h3 cds-text="display" class="docs-red">300+</h3>
-            <p cds-text="body expanded" cds-layout="m-t:lg">releases for new features and continuous improvements</p>
+            <h3 cds-text="display center" class="docs-red">300+</h3>
+            <p cds-text="body expanded center" cds-layout="m-t:lg">
+              releases for new features and continuous improvements
+            </p>
           </div>
         </div>
-        <p cds-text="message" cds-layout="m-t:xl">
+        <p cds-text="section expanded" cds-layout="m-t:xl">
           Clarity firmly believes that the best products are built by those who form a rich, varied community. We invite
           all forms of feedback or ideas that allow us, together, to create better experiences for all users.
         </p>
 
-        <div cds-layout="horizontal gap:lg align:center col:start-2 col:10 m-t:lg">
-          <cds-button action="outline">
-            <router-link to="/get-started/design">
+        <div cds-layout="horizontal gap:lg align:center col:start-2 col:10 m-t:xl m-t@sm:lg">
+          <router-link to="/get-started/angular">
+            <cds-button action="outline">
               Get started developing
-            </router-link>
-          </cds-button>
-          <cds-button action="outline">
-            <router-link to="/get-started/angular">
+            </cds-button>
+          </router-link>
+          <router-link to="/get-started/design">
+            <cds-button action="outline">
               Get started designing
-            </router-link>
-          </cds-button>
+            </cds-button>
+          </router-link>
         </div>
       </div>
     </section>
