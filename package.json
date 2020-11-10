@@ -15,6 +15,7 @@
       "@clr/core/lit-html",
       "@clr/core/@storybook/**",
       "@clr/core/normalize.css",
+      "**/@clr/icons",
       "**/@storybook/**",
       "**/@angular/*",
       "**/@angular/*/**",
