@@ -34,6 +34,7 @@ function getChildren(dir) {
       .readdirSync(base)
       // README files are already accounted for and assumed
       .filter(basename => basename !== 'README.md')
+      .filter(basename => basename !== 'get-started.md')
       // Remove any paths that aren't markdown or subdirectories
       .filter(basename => ['', '.md'].includes(path.extname(basename)))
       // Remove anything prefixed with _
@@ -67,14 +68,6 @@ module.exports = [
         path: '/get-started/design',
       },
       {
-        title: 'Start Building with Angular',
-        path: '/get-started/angular',
-      },
-      {
-        title: 'Start Building with HTML',
-        path: '/get-started/html',
-      },
-      {
         title: 'Updating Clarity',
         path: '/get-started/update',
       },
@@ -88,7 +81,17 @@ module.exports = [
   {
     title: 'Web Components',
     path: '/web-components/',
-    children: [...getChildren('web-components')],
+    children: [
+      {
+        title: 'Overview',
+        path: '/web-components/',
+      },
+      {
+        title: 'Get Started',
+        path: '/web-components/get-started',
+      },
+      ...getChildren('web-components'),
+    ],
   },
   {
     title: 'Angular Components',
@@ -97,6 +100,10 @@ module.exports = [
       {
         title: 'Overview',
         path: '/angular-components/',
+      },
+      {
+        title: 'Get Started',
+        path: '/angular-components/get-started',
       },
       ...getChildren('angular-components'),
     ],

@@ -1,3 +1,3 @@
-# Component Overview
+# Angular Components Overview
 
-<ComponentsOverview />
+<ComponentsOverview framework="Angular Components"/>

@@ -1,3 +1,8 @@
+---
+title: Angular Quickstart
+toc: true
+---
+
 # Angular Quickstart
 
 Clarity works best with Angular, and we are constantly updating Clarity to work best with the latest version of Angular. If you are not using Angular, then you'll want to review the [HTML/CSS Quickstart](/get-started/html).
