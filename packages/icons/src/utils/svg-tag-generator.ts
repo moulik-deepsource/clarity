@@ -9,7 +9,7 @@ const ALERTED_CLASS_SUBSTRING = '--alerted';
 const SOLID_CLASS = 'clr-i-solid';
 
 export function clrIconSVG(content: string): string {
-  let classes: string = '';
+  let classes = '';
 
   if (content.indexOf(BADGED_CLASS_SUBSTRING) > -1) {
     classes += 'can-badge ';
